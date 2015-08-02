@@ -7,9 +7,9 @@
 /*
 	after running this program, the solution seems to be:
 
-	1 5	2
-	7	4	9
-	6	8 3
+	1 5 2
+	7 4 9
+	6 8 3
 */
 
 public class PuzzleThing

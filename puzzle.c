@@ -102,6 +102,57 @@ void test(int i,int j,int k,int l,int m,int n,int p,int q,int r,int s)
 	}
 	
 	// Now test the numbers comprised of the first n digits
+	if (i%1 != 0)
+	{
+		return; // no way this will fail, this is trivial
+	}
+
+	if ((i*10 + j)%2 != 0)
+	{
+		return;
+	}
+
+	if ((i*100 + j*10 + k)%3 != 0)
+	{
+		return;
+	}
+
+	if ((i*1000 + j*100 + k*10 + l)%4 != 0)
+	{
+		return;
+	}
+
+	// this one might as well be: if (m != 5)
+	if ((i*10000 + j*1000 + k*100 + l*10 + m)%5 != 0) 
+	{
+		return;
+	}
+
+	if ((i*100000 + j*10000 + k*1000 + l*100 + m*10 + n)%6 != 0)
+	{
+		return;
+	}
+
+	if ((i*1000000 + j*100000 + k*10000 + l*1000 + m*100 + n*10 + p)%7 != 0)
+	{
+		return;
+	}
+
+	if ((i*10000000 + j*1000000 + k*100000 + l*10000 + m*1000 + n*100 + p*10 + q)%8 != 0)
+	{
+		return;
+	}
+
+	if ((i*100000000 + j*10000000 + k*1000000 + l*100000 + m*10000 + n*1000 + p*100 + q*10 + r)%9 != 0)
+	{
+		return;
+	}
+
+	// this one might as well be: if (s != 0)
+	if ((i*1000000000 + j*100000000 + k*10000000 + l*1000000 + m*100000 + n*10000 + p*1000 + q*100 + r*10 + s)%10 != 0)
+	{
+		return;
+	}
 
 	// If we made it all the way down here, this must be a solution. Print it.
 	printf("Solution: %d %d %d %d %d %d %d %d %d %d\n",i,j,k,l,m,n,p,q,r,s);

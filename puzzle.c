@@ -7,6 +7,9 @@ For example, for the number 123,
 1 is divisible by 1.
 12 is divisible by 2.
 123 is divisible by 3.
+
+Turns out: the solution is
+3 8 1 6 5 4 7 2 9 0
 */
 
 #include <stdio.h>
@@ -31,8 +34,11 @@ int main()
 			{
 				for (l = 0; l < 10; l++)
 				{
+					m=5;
+					/*
 					for (m = 0; m < 10; m++)
 					{
+						*/
 						for (n = 0; n < 10; n++)
 						{
 							for (p = 0; p < 10; p++)
@@ -41,15 +47,21 @@ int main()
 								{
 									for (r = 0; r < 10; r++)
 									{
+										/*
 										for (s = 0; s < 10; s++)
 										{
-											// test(i,j,k,l,m,n,p,q,r,s);
+											test(i,j,k,l,m,n,p,q,r,s);
 										}
+										*/
+										s=0;
+										test(i,j,k,l,m,n,p,q,r,s);
 									}
 								}
 							}
 						}
+					/*
 					}
+					*/
 				}
 			}
 		}
@@ -123,10 +135,12 @@ void test(int i,int j,int k,int l,int m,int n,int p,int q,int r,int s)
 	}
 
 	// this one might as well be: if (m != 5)
+	/*
 	if ((i*10000 + j*1000 + k*100 + l*10 + m)%5 != 0) 
 	{
 		return;
 	}
+	*/
 
 	if ((i*100000 + j*10000 + k*1000 + l*100 + m*10 + n)%6 != 0)
 	{
@@ -149,10 +163,12 @@ void test(int i,int j,int k,int l,int m,int n,int p,int q,int r,int s)
 	}
 
 	// this one might as well be: if (s != 0)
+	/*
 	if ((i*1000000000 + j*100000000 + k*10000000 + l*1000000 + m*100000 + n*10000 + p*1000 + q*100 + r*10 + s)%10 != 0)
 	{
 		return;
 	}
+	*/
 
 	// If we made it all the way down here, this must be a solution. Print it.
 	printf("Solution: %d %d %d %d %d %d %d %d %d %d\n",i,j,k,l,m,n,p,q,r,s);
